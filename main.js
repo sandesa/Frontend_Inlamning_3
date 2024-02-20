@@ -1,6 +1,7 @@
 let form = document.querySelector('#option-from');
 let result = document.querySelector('#result');
 let selectBtn = document.querySelector('#select-all');
+let clearBtn = document.querySelector("#clear");
 
 form.onsubmit = (event) => {
     event.preventDefault();
@@ -41,9 +42,11 @@ form.onsubmit = (event) => {
         if (event.currentTarget.checked) {
             newItem.setAttribute("class", "checked");
             numberOfUnchecked();
+            numberOfChecked();
         } else {
             newItem.setAttribute("class", "unchecked");
             numberOfUnchecked();
+            numberOfChecked();
         }
     }
     numberOfLi();
@@ -51,6 +54,53 @@ form.onsubmit = (event) => {
 };
 
 selectBtn.onclick = (event) => {checkAll()}
+
+let allBtn = document.querySelector("#all");
+let activeBtn = document.querySelector("#active");
+let completedBtn = document.querySelector("#completed");
+
+allBtn.onclick = (event) => {
+    let checked = document.querySelectorAll(".checked");
+    let unchecked = document.querySelectorAll(".unchecked");
+    checked.forEach((item) => {
+        item.style.display = 'block';
+    })
+    unchecked.forEach((item) => {
+        item.style.display = 'block';
+    })
+}
+
+
+activeBtn.onclick = (event) => {
+    let checked = document.querySelectorAll(".checked");
+    let unchecked = document.querySelectorAll(".unchecked");
+    checked.forEach((item) => {
+        item.style.display = 'none';
+    })
+    unchecked.forEach((item) => {
+        item.style.display = 'block';
+    })
+}
+
+completedBtn.onclick = (event) => {
+    let checked = document.querySelectorAll(".checked");
+    let unchecked = document.querySelectorAll(".unchecked");
+    unchecked.forEach((item) => {
+        item.style.display = 'none';
+    })
+    checked.forEach((item) => {
+        item.style.display = 'block';
+    })
+}
+
+clearBtn.onclick = (event) => {
+    let checked = document.querySelectorAll(".checked");
+    checked.forEach((item) => {
+        item.remove();
+    })
+    clearBtn.style.display = 'none';
+    numberOfLi();
+}
 
 function checkAll() {
         let allLi = document.querySelectorAll(".unchecked");
@@ -64,6 +114,7 @@ function checkAll() {
             box.checked = true;
         })
     numberOfUnchecked();
+    numberOfChecked();
     uncheckAll();
 }
 
@@ -80,20 +131,22 @@ function uncheckAll() {
             box.checked = false;
         })
         numberOfUnchecked();
+        numberOfChecked();
         selectBtn.onclick = (event) => {checkAll()}
     }
 }
 
 function numberOfLi() {
     let count = document.querySelectorAll(".checked").length + document.querySelectorAll(".unchecked").length;
+    let footer = document.querySelector("footer");
 
     if (count > 0) {
         selectBtn.style.display = 'block';
-        let footer = document.querySelector("footer");
         footer.style.display = 'block';
         numberOfUnchecked();
     } else {
         selectBtn.style.display = 'none';
+        footer.style.display = 'none';
     }
 }
 
@@ -101,6 +154,18 @@ function numberOfUnchecked() {
     let count = document.querySelectorAll(".unchecked").length;
     document.querySelector('#items-left').textContent = `${count} items left`;
 }
+
+function numberOfChecked() {
+    let count = document.querySelectorAll(".checked").length;
+    if (count > 0) {
+        clearBtn.style.display = 'block';
+    } else {
+        clearBtn.style.display = 'none';
+    }
+}
+
+
+
 
 
 

@@ -43,6 +43,7 @@ form.onsubmit = (event) => {
             numberOfUnchecked();
         } else {
             newItem.setAttribute("class", "unchecked");
+            numberOfUnchecked();
         }
     }
     numberOfLi();
@@ -52,7 +53,7 @@ form.onsubmit = (event) => {
 selectBtn.onclick = (event) => {checkAll()}
 
 function checkAll() {
-        let allLi = document.querySelectorAll("li");
+        let allLi = document.querySelectorAll(".unchecked");
         let allBoxes = document.querySelectorAll(".box")
     
         allLi.forEach((li) => {
@@ -62,12 +63,13 @@ function checkAll() {
         allBoxes.forEach((box) => {
             box.checked = true;
         })
+    numberOfUnchecked();
     uncheckAll();
 }
 
 function uncheckAll() {
     selectBtn.onclick = (event) => {
-        let allLi = document.querySelectorAll("li");
+        let allLi = document.querySelectorAll(".checked");
         let allBoxes = document.querySelectorAll(".box")
     
         allLi.forEach((li) => {
@@ -77,6 +79,7 @@ function uncheckAll() {
         allBoxes.forEach((box) => {
             box.checked = false;
         })
+        numberOfUnchecked();
         selectBtn.onclick = (event) => {checkAll()}
     }
 }
@@ -86,13 +89,16 @@ function numberOfLi() {
 
     if (count > 0) {
         selectBtn.style.display = 'block';
+        let footer = document.querySelector("footer");
+        footer.style.display = 'block';
+        numberOfUnchecked();
     } else {
         selectBtn.style.display = 'none';
     }
 }
 
 function numberOfUnchecked() {
-    let count = document.querySelectorAll(".unchecked");
+    let count = document.querySelectorAll(".unchecked").length;
     document.querySelector('#items-left').textContent = `${count} items left`;
 }
 

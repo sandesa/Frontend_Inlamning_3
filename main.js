@@ -39,9 +39,10 @@ form.onsubmit = (event) => {
     newBox.onchange = (event) => {
 
         if (event.currentTarget.checked) {
-            newItem.changeAttribute("class", "checked");
+            newItem.setAttribute("class", "checked");
+            numberOfUnchecked();
         } else {
-            newItem.removeAttribute("class");
+            newItem.setAttribute("class", "unchecked");
         }
     }
     numberOfLi();
@@ -70,7 +71,7 @@ function uncheckAll() {
         let allBoxes = document.querySelectorAll(".box")
     
         allLi.forEach((li) => {
-            li.removeAttribute("class");
+            li.setAttribute("class", "unchecked");
         })
     
         allBoxes.forEach((box) => {
@@ -81,14 +82,21 @@ function uncheckAll() {
 }
 
 function numberOfLi() {
-    let numOfLi = document.querySelectorAll("li").length;
+    let count = document.querySelectorAll(".checked").length + document.querySelectorAll(".unchecked").length;
 
-    if (numOfLi > 0) {
+    if (count > 0) {
         selectBtn.style.display = 'block';
     } else {
         selectBtn.style.display = 'none';
     }
 }
+
+function numberOfUnchecked() {
+    let count = document.querySelectorAll(".unchecked");
+    document.querySelector('#items-left').textContent = `${count} items left`;
+}
+
+
 
 
 

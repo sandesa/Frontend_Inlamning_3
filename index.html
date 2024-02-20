@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend inlämning 3</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
+  </head>
 
-<body>
-    <h1>This is a head</h1>
-</body>
-
+  <body>
+    <header>
+      <h1>todos</h1>
+      <form id="option-from">
+        <input
+          type="text"
+          name="inputText"
+          id="input-text"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+        <label for="input-text" id="select-all" style="display: none">
+          🔽</label
+        >
+      </form>
+    </header>
+    <main>
+      <ul id="result"></ul>
+    </main>
+    <footer></footer>
+  </body>
 </html>

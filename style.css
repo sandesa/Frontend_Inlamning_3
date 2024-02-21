@@ -5,33 +5,38 @@
 }
 
 html {
-    background-color: rgb(54, 78, 88);
+    background: linear-gradient(45deg, #515BD4, #8134AF, #DD2A7B, #FEDA77, #F58529);
+    height: 100%;
 }
 
 h1 {
+    background-image: linear-gradient(45deg, #9d0bf1,  #27158d);
+    background-size: 100%;
+    background-clip: text;
+    color: transparent;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px;
     font-size: 100px;
 }
 
 form {
     padding: 20px;
-    background-color: aqua;
+    background:  linear-gradient(45deg, #9d0bf1,  #27158d);
     display: flex;
     min-width: 800px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(32, 32, 32);
 }
 
 #select-all {
-    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 30px;
 }
 
 #input-text {
-    background-color: aqua;
+    color: white;
+    background: transparent;
     padding: 10px;
     width: 100%;
     border: none;
@@ -46,11 +51,12 @@ form {
     display: flex;
     flex-direction: column;
     min-width: 800px;
+    max-width: 800px;
 }
 
 div {
-    background-color: aqua;
-    border-bottom: 1px solid grey;
+    background:  linear-gradient(45deg, #9d0bf1,  #27158d);
+    border-bottom: 1px solid rgb(8, 8, 8);
     padding: 20px;
     padding-left: 30px;
     display: flex;
@@ -60,12 +66,26 @@ div {
 div label {
     font-size: 20px;
     min-width: 680px;
+    max-width: 680px;
     padding-left: 25px;
+    color: white;
 }
 
 div button {
+    display: none;
     border: none;
     background: none;
+}
+
+div:hover {
+    filter: hue-rotate(20deg);
+    button {
+        display: block;
+    }
+}
+
+form:focus-within {
+    filter: hue-rotate(10deg);
 }
 
 .box {
@@ -74,7 +94,8 @@ div button {
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    background: transparent;
+    font-family: monospace;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -86,10 +107,41 @@ li {
 
 .checked label {
         text-decoration: line-through;
-        color: grey;
+        color: rgb(58, 58, 58);
+}
+
+.checked div {
+    filter: hue-rotate(20deg);
 }
 
 ::placeholder {
     font-style: italic;
+    color: white;
 }
 
+footer {
+    padding: 20px;
+    min-width: 800px;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+#filter {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+}
+
+footer button {
+    background: none;
+    border: 1px rgb(7, 3, 253) solid;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 4px;
+}
+
+footer button:hover {
+    border: 1px rgb(160, 61, 253) solid;
+    border-radius: 4px;
+}

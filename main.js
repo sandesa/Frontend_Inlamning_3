@@ -142,7 +142,7 @@ function numberOfLi() {
 
     if (count > 0) {
         selectBtn.style.display = 'flex';
-        footer.style.display = 'block';
+        footer.style.display = 'flex';
         numberOfUnchecked();
     } else {
         selectBtn.style.display = 'none';

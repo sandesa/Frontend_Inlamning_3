@@ -141,7 +141,7 @@ function numberOfLi() {
     let footer = document.querySelector("footer");
 
     if (count > 0) {
-        selectBtn.style.display = 'block';
+        selectBtn.style.display = 'flex';
         footer.style.display = 'block';
         numberOfUnchecked();
     } else {

@@ -4,6 +4,43 @@
     padding: 0;
 }
 
+html {
+    background-color: rgb(54, 78, 88);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 100px;
+}
+
+form {
+    padding: 20px;
+    background-color: aqua;
+    display: flex;
+    min-width: 800px;
+}
+
+#select-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+#input-text {
+    background-color: aqua;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 25px;
+}
+
+#input-text:focus {
+    outline: none;
+}
+
 body {
     font-family: Helvetica, sans-serif;
     display: grid;
@@ -18,5 +55,9 @@ li {
 .checked label {
         text-decoration: line-through;
         color: grey;
+}
+
+::placeholder {
+    font-style: italic;
 }
 

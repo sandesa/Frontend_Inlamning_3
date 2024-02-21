@@ -125,7 +125,9 @@ li {
 }
 
 #info {
-    padding: 20px;
+    background:  linear-gradient(45deg, #9d0bf1,  #27158d);
+    color: white;
+    padding: 10px 15px;
     min-width: 550px;
     justify-content: space-between;
     font-size: 15px;
@@ -137,17 +139,24 @@ li {
     font-size: 15px;
 }
 
+#items-left {
+    display: flex;
+    align-items: center;
+}
+
 #info button {
     background: none;
-    border: 1px rgb(7, 3, 253) solid;
+    border: 1px rgb(150, 93, 255) solid;
+    color: white;
     border-radius: 4px;
-    font-family: monospace;
+    font-family: inherit;
     font-size: 15px;
-    padding: 4px;
+    padding: 3px 7px;
+    height: 100%;
 }
 
 #info button:hover {
-    border: 1px rgb(160, 61, 253) solid;
+    border: 1px rgb(198, 138, 253) solid;
     border-radius: 4px;
 }
 

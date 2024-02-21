@@ -151,13 +151,15 @@ function numberOfLi() {
         selectBtn.style.display = 'flex';
         footer.style.display = 'flex';
         form.style.paddingLeft = '20px';
-        form.style.borderBottom = '1px solid rgb(32, 32, 32)';
+        form.style.borderBottom = '1px solid rgb(150, 93, 255)';
+        document.querySelector('#input-text').style.paddingLeft = '10px';
         numberOfUnchecked();
     } else {
         selectBtn.style.display = 'none';
         footer.style.display = 'none';
         form.style.paddingLeft = '60px';
         form.style.borderBottom = 'none';
+        document.querySelector('#input-text').style.paddingLeft = '0px';
     }
 }
 

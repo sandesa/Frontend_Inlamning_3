@@ -15,7 +15,7 @@ h1 {
     color: transparent;
     display: flex;
     justify-content: center;
-    padding: 30px;
+    padding: 20px;
     font-size: 80px;
     font-weight: 200;
 }
@@ -30,7 +30,7 @@ form {
 #select-all {
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 25px;
     border: none;
     background: none;
 }
@@ -60,7 +60,7 @@ form {
 
 div {
     background:  linear-gradient(45deg, #9d0bf1,  #27158d);
-    border-bottom: 1px solid rgb(8, 8, 8);
+    border-bottom: 1px solid rgb(150, 93, 255);
     padding: 20px;
     padding-left: 30px;
     display: flex;
@@ -124,7 +124,7 @@ li {
     font-weight: 400;
 }
 
-footer {
+#info {
     padding: 20px;
     min-width: 550px;
     justify-content: space-between;
@@ -137,7 +137,7 @@ footer {
     font-size: 15px;
 }
 
-footer button {
+#info button {
     background: none;
     border: 1px rgb(7, 3, 253) solid;
     border-radius: 4px;
@@ -146,7 +146,19 @@ footer button {
     padding: 4px;
 }
 
-footer button:hover {
+#info button:hover {
     border: 1px rgb(160, 61, 253) solid;
     border-radius: 4px;
+}
+
+#bottom-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 65px;
+    font-size: 11px;
+}
+
+p {
+    margin: 5px;
 }

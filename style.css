@@ -20,6 +20,7 @@ form {
     background-color: aqua;
     display: flex;
     min-width: 800px;
+    border-bottom: 1px solid grey;
 }
 
 #select-all {
@@ -39,6 +40,37 @@ form {
 
 #input-text:focus {
     outline: none;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    min-width: 800px;
+}
+
+div {
+    background-color: aqua;
+    border-bottom: 1px solid grey;
+    padding: 20px;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+div label {
+    font-size: 20px;
+    min-width: 680px;
+    padding-left: 25px;
+}
+
+div button {
+    border: none;
+    background: none;
+}
+
+.box {
+    width: 20px;
+    height: 20px;
 }
 
 body {

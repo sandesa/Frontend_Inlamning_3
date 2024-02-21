@@ -7,8 +7,8 @@ htmlHeight();
 
 form.onsubmit = (event) => {
     event.preventDefault();
-
-    let text = form.elements.inputText.value;
+    if (document.getElementById('input-text').value.trim().length > 0){
+        let text = form.elements.inputText.value;
     form.elements.inputText.value = '';
 
     let newItem = document.createElement('li');
@@ -53,7 +53,7 @@ form.onsubmit = (event) => {
     }
     htmlHeight();
     numberOfLi();
-
+    }
 };
 
 selectBtn.onclick = (event) => {checkAll()}

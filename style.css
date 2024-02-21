@@ -82,14 +82,14 @@ div button {
 }
 
 div:hover {
-    filter: hue-rotate(20deg);
+    filter: hue-rotate(-10deg);
     button {
         display: block;
     }
 }
 
 form:focus-within {
-    filter: hue-rotate(10deg);
+    filter: hue-rotate(-20deg);
 }
 
 .box {
@@ -111,11 +111,11 @@ li {
 
 .checked label {
         text-decoration: line-through;
-        color: rgb(58, 58, 58);
+        color: rgb(175, 175, 175);
 }
 
 .checked div {
-    filter: hue-rotate(20deg);
+    filter: hue-rotate(-10deg);
 }
 
 ::placeholder {

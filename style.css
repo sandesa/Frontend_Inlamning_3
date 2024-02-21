@@ -6,7 +6,6 @@
 
 html {
     background: linear-gradient(45deg, #515BD4, #8134AF, #DD2A7B, #FEDA77, #F58529);
-    height: 100%;
 }
 
 h1 {
@@ -17,30 +16,36 @@ h1 {
     display: flex;
     justify-content: center;
     padding: 30px;
-    font-size: 100px;
+    font-size: 80px;
+    font-weight: 200;
 }
 
 form {
-    padding: 20px;
+    padding: 16px 16px 16px 60px;
     background:  linear-gradient(45deg, #9d0bf1,  #27158d);
     display: flex;
-    min-width: 800px;
-    border-bottom: 1px solid rgb(32, 32, 32);
+    min-width: 550px;
 }
 
 #select-all {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    border: none;
+    background: none;
+}
+
+#select-all:hover {
+    color: black;
 }
 
 #input-text {
     color: white;
     background: transparent;
-    padding: 10px;
     width: 100%;
     border: none;
     font-size: 25px;
+    font-weight: 400;
 }
 
 #input-text:focus {
@@ -50,7 +55,7 @@ form {
 #result {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 550px;
 }
 
 div {
@@ -64,7 +69,7 @@ div {
 
 div label {
     font-size: 20px;
-    width: 680px;
+    width: 550px;
     padding-left: 25px;
     color: white;
     word-break: break-word;
@@ -94,7 +99,7 @@ form:focus-within {
 
 body {
     background: transparent;
-    font-family: monospace;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -115,12 +120,13 @@ li {
 
 ::placeholder {
     font-style: italic;
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
 }
 
 footer {
     padding: 20px;
-    min-width: 800px;
+    min-width: 550px;
     justify-content: space-between;
     font-size: 15px;
 }

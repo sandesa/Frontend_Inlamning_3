@@ -3,6 +3,8 @@ let result = document.querySelector('#result');
 let selectBtn = document.querySelector('#select-all');
 let clearBtn = document.querySelector("#clear");
 
+htmlHeight();
+
 form.onsubmit = (event) => {
     event.preventDefault();
 
@@ -49,6 +51,7 @@ form.onsubmit = (event) => {
             numberOfChecked();
         }
     }
+    htmlHeight();
     numberOfLi();
 
 };
@@ -60,6 +63,8 @@ let activeBtn = document.querySelector("#active");
 let completedBtn = document.querySelector("#completed");
 
 allBtn.onclick = (event) => {
+    event.preventDefault();
+
     let checked = document.querySelectorAll(".checked");
     let unchecked = document.querySelectorAll(".unchecked");
     checked.forEach((item) => {
@@ -100,6 +105,8 @@ clearBtn.onclick = (event) => {
     })
     clearBtn.style.display = 'none';
     numberOfLi();
+    let html = document.querySelector('html');
+    html.setAttribute('style', `height: 100%;`);
 }
 
 function checkAll() {
@@ -143,10 +150,14 @@ function numberOfLi() {
     if (count > 0) {
         selectBtn.style.display = 'flex';
         footer.style.display = 'flex';
+        form.style.paddingLeft = '20px';
+        form.style.borderBottom = '1px solid rgb(32, 32, 32)';
         numberOfUnchecked();
     } else {
         selectBtn.style.display = 'none';
         footer.style.display = 'none';
+        form.style.paddingLeft = '60px';
+        form.style.borderBottom = 'none';
     }
 }
 
@@ -162,6 +173,12 @@ function numberOfChecked() {
     } else {
         clearBtn.style.display = 'none';
     }
+}
+
+function htmlHeight() {
+    let html = document.querySelector('html');
+    let height = html.scrollHeight;
+    html.setAttribute('style', `height: ${height}px;`);
 }
 
 

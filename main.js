@@ -21,6 +21,7 @@ form.onsubmit = (event) => {
     newBox.setAttribute("class", "box");
 
     let newLabel = document.createElement('label');
+    newLabel.setAttribute("class", "task");
 
     let deleteBtn = document.createElement('button');
 
@@ -37,6 +38,21 @@ form.onsubmit = (event) => {
     deleteBtn.onclick = (event) => {
         newItem.remove();
         numberOfLi();
+    }
+
+    newLabel.onclick = (event) => {
+        event.preventDefault();
+        if (newItem.getAttribute('class') === 'unchecked'){
+            newItem.setAttribute('class', 'checked')
+            newBox.checked = true;
+            numberOfUnchecked();
+            numberOfChecked();
+        } else {
+            newItem.setAttribute('class', 'unchecked')
+            newBox.checked = false;
+            numberOfUnchecked();
+            numberOfChecked();
+        }
     }
 
     newBox.onchange = (event) => {
@@ -181,6 +197,10 @@ function htmlHeight() {
     let html = document.querySelector('html');
     let height = html.scrollHeight;
     html.setAttribute('style', `height: ${height}px;`);
+}
+
+function labelClickCheck() {
+
 }
 
 

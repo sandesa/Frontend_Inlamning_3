@@ -9,37 +9,33 @@
   </head>
 
   <body>
-    <section>
-      <header>
-        <h1>todos</h1>
-        <form id="option-from">
-          <button type="button" id="select-all" style="display: none">
-            🔽
-          </button>
-          <input
-            type="text"
-            name="inputText"
-            id="input-text"
-            placeholder="What needs to be done?"
-            autofocus
-          />
-        </form>
-      </header>
-      <main>
-        <ul id="result"></ul>
-        <footer id="info" style="display: none">
-          <span id="items-left"></span>
-          <button style="display: none" type="button" id="clear">
-            Clear completed
-          </button>
-          <ul id="filter">
-            <li><button type="button" id="all">All</button></li>
-            <li><button type="button" id="active">Active</button></li>
-            <li><button type="button" id="completed">Completed</button></li>
-          </ul>
-        </footer>
-      </main>
-    </section>
+    <header>
+      <h1>todos</h1>
+      <form id="option-from">
+        <button type="button" id="select-all" style="display: none">🔽</button>
+        <input
+          type="text"
+          name="inputText"
+          id="input-text"
+          placeholder="What needs to be done?"
+          autofocus
+        />
+      </form>
+    </header>
+    <main>
+      <ul id="result"></ul>
+      <footer id="info" style="display: none">
+        <span id="items-left"></span>
+        <button style="display: none" type="button" id="clear">
+          Clear completed
+        </button>
+        <ul id="filter">
+          <li><button type="button" id="all">All</button></li>
+          <li><button type="button" id="active">Active</button></li>
+          <li><button type="button" id="completed">Completed</button></li>
+        </ul>
+      </footer>
+    </main>
     <footer id="bottom-info">
       <p>Created by Elie Bou Absi & Samuel Sandenäs</p>
       <p>Dedicated to Jakob Kallin</p>

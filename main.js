@@ -181,7 +181,11 @@ function numberOfLi() {
 
 function numberOfUnchecked() {
     let count = document.querySelectorAll(".unchecked").length;
-    document.querySelector('#items-left').textContent = `${count} items left`;
+    if (count === 1) {
+        document.querySelector('#items-left').textContent = `${count} item left`;
+    } else {
+        document.querySelector('#items-left').textContent = `${count} items left`;
+    }
 }
 
 function numberOfChecked() {

@@ -25,10 +25,11 @@ form {
     background:  linear-gradient(45deg, #9d0bf1,  #27158d);
     display: flex;
     min-width: 550px;
+    height: 65px;
+    align-items: center;
 }
 
 #select-all {
-    justify-content: center;
     align-items: center;
     font-size: 25px;
     border: none;
@@ -44,7 +45,7 @@ form {
     background: transparent;
     width: 100%;
     border: none;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 400;
 }
 
@@ -61,14 +62,14 @@ form {
 div {
     background:  linear-gradient(45deg, #9d0bf1,  #27158d);
     border-bottom: 1px solid rgb(150, 93, 255);
-    padding: 20px;
+    padding: 15px 15px 15px 60px;
     padding-left: 30px;
     display: flex;
     align-items: center;
 }
 
 div label {
-    font-size: 20px;
+    font-size: 24px;
     width: 550px;
     padding-left: 25px;
     color: white;

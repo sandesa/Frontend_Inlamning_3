@@ -5,14 +5,12 @@
 }
 
 html {
-  background: linear-gradient(
-    45deg,
-    #515bd4,
-    #8134af,
-    #dd2a7b,
-    #feda77,
-    #f58529
-  );
+  background: linear-gradient(45deg,
+      #515bd4,
+      #8134af,
+      #dd2a7b,
+      #feda77,
+      #f58529);
 }
 
 h1 {
@@ -31,7 +29,7 @@ form {
   padding: 16px 16px 16px 60px;
   background: linear-gradient(45deg, #9d0bf1, #27158d);
   display: flex;
-  min-width: 550px;
+  width: 550px;
   height: 65px;
   align-items: center;
 }
@@ -95,6 +93,7 @@ div button {
 
 div:hover {
   filter: hue-rotate(-10deg);
+
   button {
     display: block;
   }
@@ -140,7 +139,7 @@ li {
   background: linear-gradient(45deg, #9d0bf1, #27158d);
   color: white;
   padding: 10px 15px;
-  min-width: 550px;
+  width: 550px;
   justify-content: space-between;
   font-size: 15px;
 }
@@ -182,4 +181,52 @@ li {
 
 p {
   margin: 5px;
+}
+
+@media screen and (max-width: 580px) {
+
+  form,
+  #result,
+  #info {
+    width: 450px;
+  }
+
+  #filter {
+    gap: 10px;
+  }
+
+  .box {
+    width: 25px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  form,
+  #result,
+  #info {
+    width: 350px;
+  }
+
+  #input-text,
+  div label {
+    font-size: 21px;
+  }
+
+  #filter {
+    gap: 2px;
+  }
+
+  #info button,
+  #items-left {
+    font-size: 12px;
+  }
+
+  #info button {
+    padding: 3px 3px;
+  }
+
+  .box {
+    width: 30px;
+  }
 }

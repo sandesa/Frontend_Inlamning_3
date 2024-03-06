@@ -205,6 +205,11 @@ function htmlHeight() {
   let html = document.querySelector("html");
   let height = html.scrollHeight;
   html.setAttribute("style", `height: ${height}px;`);
-}
+} 
+  // För att förtydliga vad htmlHeight gör:
+  // Den anpassar höjden på html så att bakgrunden inte spårar ur
+  // om listan med Todos blir längre än vad sidan är, sedan
+  // återställs höjden på html till ursprungshöjden om listan töms. :)
 
-function labelClickCheck() {}
+
+
